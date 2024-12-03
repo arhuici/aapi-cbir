@@ -6,7 +6,7 @@ Grupo B: Alejandro Pastor Membrado, Ángel Romero Huici
 Las imágenes utilizadas para este proyecto proceden del conjunto de datos https://www.kaggle.com/datasets/elkamel/corel-images  
 y ya han sido tratadas para el funcionamiento del sistema.  
 
-Se incluye en el notebook como código comentado la transformación del conjunto original de datos a los utilizados para el proyecto.
+Se incluye en el notebook la transformación del conjunto original de datos a los utilizados para el proyecto aunque no esté incluido el conjunto de datos original.
 
 ## Contenidos
 - app.py  
