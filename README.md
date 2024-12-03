@@ -19,6 +19,6 @@ Se incluye en el notebook como código comentado la transformación del conjunto
   - projectfaiss.ipynb con la implementación del código de los extractores, indexación y evaluación
  
 ## Ejecución
-- app.py, se ejecuta en http://localhost:8501:
-  **streamlit run app.py**
+- app.py, se ejecuta en http://localhost:8501  
+    *streamlit run app.py*
 - projectfaiss.ipynb, Jupyter Notebook
