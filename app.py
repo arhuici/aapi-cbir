@@ -11,6 +11,7 @@ import pathlib
 from PIL import Image
 import numpy as np
 from collections import Counter
+from torchvision.models import Inception_V3_Weights, ResNet152_Weights, EfficientNet_B0_Weights
 
 import time
 
@@ -25,14 +26,14 @@ from torchvision import transforms
 import torch.nn as nn
 import torchvision.models as models
 
-resnet152 = models.resnet152(pretrained=True)
+resnet152 = models.resnet152(weights=ResNet152_Weights.IMAGENET1K_V1)
 modules=list(resnet152.children())[:-1]
 resnet152=nn.Sequential(*modules)
 for p in resnet152.parameters():
     p.requires_grad = False
 
 #Efficientnet
-efficientnet = models.efficientnet_b0(pretrained=True)
+efficientnet = models.efficientnet_b0(weights=EfficientNet_B0_Weights.IMAGENET1K_V1)
 modules = list(efficientnet.children())[:-1]
 efficientnet_model = nn.Sequential(*modules)
 for p in efficientnet_model.parameters():
@@ -40,7 +41,7 @@ for p in efficientnet_model.parameters():
 
 # INCEPTION
 from torchvision.models import inception_v3
-inception = inception_v3(pretrained=True, transform_input=False)
+inception = inception_v3(weights=Inception_V3_Weights.IMAGENET1K_V1, transform_input=False)
 inception.fc = nn.Identity()
 inception.eval()
 
